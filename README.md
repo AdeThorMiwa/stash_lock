@@ -1,57 +1,137 @@
-# Sample Hardhat 3 Beta Project (`node:test` and `viem`)
+# Stash Contracts
 
-This project showcases a Hardhat 3 Beta project using the native Node.js test runner (`node:test`) and the `viem` library for Ethereum interactions.
+Stash Contracts is a smart contract project built using the Hardhat framework. This repository contains the smart contracts and deployment scripts for the Stash protocol, which provides a decentralized protocol for saving and secure access management for digital assets on the blockchain.
 
-To learn more about the Hardhat 3 Beta, please visit the [Getting Started guide](https://hardhat.org/docs/getting-started#getting-started-with-hardhat-3). To share your feedback, join our [Hardhat 3 Beta](https://hardhat.org/hardhat3-beta-telegram-group) Telegram group or [open an issue](https://github.com/NomicFoundation/hardhat/issues/new) in our GitHub issue tracker.
+## Features
 
-## Project Overview
+- **Upgradeable Contracts**: Built with upgradeability in mind using proxy patterns.
+- **Modular Design**: Contracts are organized into reusable modules for better maintainability and scalability.
+- **Comprehensive Testing**: Includes a suite of tests to ensure the reliability and security of the contracts.
+- **Deployment Automation**: Deployment scripts and configurations for multiple networks.
 
-This example project includes:
+## Prerequisites
 
-- A simple Hardhat configuration file.
-- Foundry-compatible Solidity unit tests.
-- TypeScript integration tests using [`node:test`](nodejs.org/api/test.html), the new Node.js native test runner, and [`viem`](https://viem.sh/).
-- Examples demonstrating how to connect to different types of networks, including locally simulating OP mainnet.
+To work with this project, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v16 or later)
+- [pnpm](https://pnpm.io/)
+- [Hardhat](https://hardhat.org/)
+- [Foundry](https://book.getfoundry.sh/) (for `anvil`)
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-repo/stash_it_contracts.git
+   cd stash_it_contracts
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   pnpm install
+   ```
+
+3. Set up the environment variables:
+
+   - Create a `.env` file in the root directory.
+   - Add the following variables to the `.env` file:
+     ```env
+     HARDHAT_NETWORK=hardhatMainnet
+     LOCALHOST_DEPLOYER_PRIVATE_KEY=<your_deployer_private_key>
+     LOCALHOST_OWNER_PRIVATE_KEY=<your_owner_private_key>
+     ```
+
+4. Start a local blockchain node (using `anvil`):
+   ```bash
+   pnpm start:node
+   ```
 
 ## Usage
 
-### Running Tests
+### Compile Contracts
 
-To run all the tests in the project, execute the following command:
+To compile the smart contracts, run:
 
-```shell
-npx hardhat test
+```bash
+pnpm compile
 ```
 
-You can also selectively run the Solidity or `node:test` tests:
+### Deploy Contracts
 
-```shell
-npx hardhat test solidity
-npx hardhat test nodejs
+To deploy the contracts using Hardhat Ignition, run:
+
+```bash
+pnpm deploy
 ```
 
-### Make a deployment to Sepolia
+To deploy all contracts:
 
-This project includes an example Ignition module to deploy the contract. You can deploy this module to a locally simulated chain or to Sepolia.
-
-To run the deployment to a local chain:
-
-```shell
-npx hardhat ignition deploy ignition/modules/Counter.ts
+```bash
+pnpm deploy:all
 ```
 
-To run the deployment to Sepolia, you need an account with funds to send the transaction. The provided Hardhat configuration includes a Configuration Variable called `SEPOLIA_PRIVATE_KEY`, which you can use to set the private key of the account you want to use.
+### Run Tests
 
-You can set the `SEPOLIA_PRIVATE_KEY` variable using the `hardhat-keystore` plugin or by setting it as an environment variable.
+To execute the test suite, run:
 
-To set the `SEPOLIA_PRIVATE_KEY` config variable using `hardhat-keystore`:
-
-```shell
-npx hardhat keystore set SEPOLIA_PRIVATE_KEY
+```bash
+pnpm test
 ```
 
-After setting the variable, you can run the deployment with the Sepolia network:
+### Scripts
 
-```shell
-npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
+The `scripts/` directory contains utility scripts for interacting with the deployed contracts. For example:
+
+- `register-facets.ts`: Register facets for the diamond pattern.
+- `send-op-tx.ts`: Send operational transactions.
+- `update-proxy-admin.ts`: Update the proxy admin.
+- `update-proxy-impl.ts`: Update the proxy implementation.
+
+Run a script using Hardhat:
+
+```bash
+pnpm script scripts/<script-name>.ts
 ```
+
+## Project Structure
+
+```
+├── contracts/          # Smart contract source files
+├── artifacts/          # Compiled contract artifacts
+├── cache/              # Hardhat cache
+├── ignition/           # Deployment modules and artifacts
+├── scripts/            # Utility scripts for contract interaction
+├── tasks/              # Custom Hardhat tasks
+├── test/               # Test files for the contracts
+├── utils/              # Helper utilities for tests and scripts
+├── hardhat.config.ts   # Hardhat configuration file
+├── package.json        # Project dependencies and scripts
+├── tsconfig.json       # TypeScript configuration
+├── .env                # Environment variables
+```
+
+## Contributing
+
+We welcome contributions to the Stash It Contracts project! To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. Push your changes to your fork:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a pull request to the `main` branch of this repository.
+
+
+## Support
+
+If you encounter any issues or have questions, feel free to open an issue in this repository.
