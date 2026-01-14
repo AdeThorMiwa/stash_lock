@@ -2,6 +2,7 @@ import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 import { LOOKUP_PROXY_CONTRACT_NAME } from "../../utils/consts.js";
 import ProxyAdminModule from "./000_proxy_admin.js";
 import LookupOpsModule from "./002_lookup_ops.js";
+import { getModuleId } from "../../utils/common.js";
 
 export default buildModule(getModuleId(LOOKUP_PROXY_CONTRACT_NAME), (m) => {
   const deployer = m.getAccount(0);
