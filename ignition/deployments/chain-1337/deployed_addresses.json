@@ -1,0 +1,11 @@
+{
+  "ProxyAdminModule#ProxyAdmin": "0x12BB3a968d0b28dbF14b77B3A13B6a07B148049A",
+  "FactoryOpsModule#FactoryOps": "0x171052B211bAd811F435f3d9e86c82B8D117f481",
+  "LookupOpsModule#LookupOps": "0xaDf05c2ff2cd07FAc90d7352A1F2C6575f608528",
+  "LookupProxyModule#LookupProxy": "0x73A19f0430Cf1DD8ef5ca4E2837c6261D136dfa8",
+  "FactoryProxyModule#FactoryProxy": "0x3A9C24369F7005A2115d47d9D832A5a9645A7e75",
+  "OwnableOpsModule#OwnableOps": "0x9bF58776bf5598D6103Fd9B5F71fa043aE989CA8",
+  "StashOpsModule#StashOps": "0x0d837AA742849fA526ee23bB150e781d328d962F",
+  "StashDepositModule#StashDeposit": "0x2A00067cCA7c9Bd5E19596Fcea04C1128FD4A2CF",
+  "StashWithdrawalModule#StashWithdrawal": "0xE96e340b298C98C87103De54f0b55DeD41F791C1"
+}

@@ -1,0 +1,112 @@
+{
+  "_format": "hh3-artifact-1",
+  "contractName": "OwnableOps",
+  "sourceName": "contracts/implementation/OwnableOps.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "name": "UnauthorizedAccount",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "name": "ZeroAddressNotAllowed",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600e575f5ffd5b506102fb8061001c5f395ff3fe608060405234801561000f575f5ffd5b506004361061003f575f3560e01c8063715018a6146100435780638da5cb5b1461004d578063f2fde38b14610071575b5f5ffd5b61004b610084565b005b6100556100fa565b6040516001600160a01b03909116815260200160405180910390f35b61004b61007f366004610298565b610108565b61008c61017d565b6001600160a01b0316336001600160a01b0316146100ef57335b604080516388c4b81360e01b81526001600160a01b039092166004830152602482015260096044820152682727aa2fa7aba722a960b91b60648201526084015b60405180910390fd5b6100f85f6101af565b565b5f61010361017d565b905090565b61011061017d565b6001600160a01b0316336001600160a01b03161461012e57336100a6565b6001600160a01b03811661017157604051634403424160e01b81526020600482015260096024820152682722abafa7aba722a960b91b60448201526064016100e6565b61017a816101af565b50565b5f6101037fd24fa2866a58892622e1ec1b1f591a414cecdee3133ac988707bf0aea153bf11546001600160a01b031690565b61017a816001600160a01b0381166101f257604051634403424160e01b815260206004820152600560248201526427aba722a960d91b60448201526064016100e6565b5f6102247fd24fa2866a58892622e1ec1b1f591a414cecdee3133ac988707bf0aea153bf11546001600160a01b031690565b7fd24fa2866a58892622e1ec1b1f591a414cecdee3133ac988707bf0aea153bf1180546001600160a01b0319166001600160a01b038581169182178355604051939450919290918416907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0905f90a3505050565b5f602082840312156102a8575f5ffd5b81356001600160a01b03811681146102be575f5ffd5b939250505056fea2646970667358221220c723d43afb5d1e3d31f4ebbc35f237da3cc196413bb10663b273742d72de208864736f6c634300081c0033",
+  "deployedBytecode": "0x608060405234801561000f575f5ffd5b506004361061003f575f3560e01c8063715018a6146100435780638da5cb5b1461004d578063f2fde38b14610071575b5f5ffd5b61004b610084565b005b6100556100fa565b6040516001600160a01b03909116815260200160405180910390f35b61004b61007f366004610298565b610108565b61008c61017d565b6001600160a01b0316336001600160a01b0316146100ef57335b604080516388c4b81360e01b81526001600160a01b039092166004830152602482015260096044820152682727aa2fa7aba722a960b91b60648201526084015b60405180910390fd5b6100f85f6101af565b565b5f61010361017d565b905090565b61011061017d565b6001600160a01b0316336001600160a01b03161461012e57336100a6565b6001600160a01b03811661017157604051634403424160e01b81526020600482015260096024820152682722abafa7aba722a960b91b60448201526064016100e6565b61017a816101af565b50565b5f6101037fd24fa2866a58892622e1ec1b1f591a414cecdee3133ac988707bf0aea153bf11546001600160a01b031690565b61017a816001600160a01b0381166101f257604051634403424160e01b815260206004820152600560248201526427aba722a960d91b60448201526064016100e6565b5f6102247fd24fa2866a58892622e1ec1b1f591a414cecdee3133ac988707bf0aea153bf11546001600160a01b031690565b7fd24fa2866a58892622e1ec1b1f591a414cecdee3133ac988707bf0aea153bf1180546001600160a01b0319166001600160a01b038581169182178355604051939450919290918416907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0905f90a3505050565b5f602082840312156102a8575f5ffd5b81356001600160a01b03811681146102be575f5ffd5b939250505056fea2646970667358221220c723d43afb5d1e3d31f4ebbc35f237da3cc196413bb10663b273742d72de208864736f6c634300081c0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {},
+  "immutableReferences": {},
+  "inputSourceName": "project/contracts/implementation/OwnableOps.sol",
+  "buildInfoId": "solc-0_8_28-10b4968a4ebeef074b69f7a3d70a5020356d0634"
+}

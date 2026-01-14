@@ -1,0 +1,10 @@
+export const PROXY_ADMIN_CONTRACT_NAME = "ProxyAdmin";
+export const OWNABLE_OPS_CONTRACT_NAME = "OwnableOps";
+export const LOOKUP_PROXY_CONTRACT_NAME = "LookupProxy";
+export const FACTORY_PROXY_CONTRACT_NAME = "FactoryProxy";
+export const FACTORY_OPS_CONTRACT_NAME = "FactoryOps";
+export const LOOKUP_OPS_CONTRACT_NAME = "LookupOps";
+export const STASH_OPS_CONTRACT_NAME = "StashOps";
+export const STASH_DEPOSIT_CONTRACT_NAME = "StashDeposit";
+export const STASH_WITHDRAWAL_CONTRACT_NAME = "StashWithdrawal";
+export const STASH_IMPL_KEY = "0x1a76ecadaefb8d4f";

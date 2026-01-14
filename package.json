@@ -1,0 +1,27 @@
+{
+  "name": "stash_it_contracts",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy": "hardhat ignition deploy",
+    "deploy:all": "hardhat deploy-all",
+    "script": "hardhat run",
+    "clean": "hardhat clean",
+    "test": "hardhat test",
+    "start:node": "anvil --chain-id 1337 --port 8545 --block-time 1 --mnemonic 'thrive direct moral nut birth begin trade orient carpet image loyal soda'"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^3.0.6",
+    "@nomicfoundation/hardhat-toolbox-viem": "^5.0.1",
+    "@types/node": "^22.8.5",
+    "forge-std": "github:foundry-rs/forge-std#v1.9.4",
+    "hardhat": "^3.1.0",
+    "typescript": "~5.8.0",
+    "viem": "^2.30.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "dotenv": "^17.2.3"
+  }
+}
